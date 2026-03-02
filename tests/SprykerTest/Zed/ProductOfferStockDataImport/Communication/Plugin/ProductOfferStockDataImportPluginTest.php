@@ -48,9 +48,6 @@ class ProductOfferStockDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -58,9 +55,6 @@ class ProductOfferStockDataImportPluginTest extends Unit
         $this->tester->ensureProductOfferStockTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -70,9 +64,6 @@ class ProductOfferStockDataImportPluginTest extends Unit
         });
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         // Arrange
@@ -102,9 +93,6 @@ class ProductOfferStockDataImportPluginTest extends Unit
         $this->tester->assertProductOfferStockDatabaseTablesContainsData();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Act

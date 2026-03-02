@@ -22,11 +22,6 @@ use Spryker\Zed\ProductOfferStockDataImport\ProductOfferStockDataImportDependenc
  */
 class ProductOfferStockDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function createProductOfferStockDataImporter(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterInterface {
@@ -47,25 +42,16 @@ class ProductOfferStockDataImportBusinessFactory extends DataImportBusinessFacto
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createProductOfferReferenceToIdProductOfferStep(): DataImportStepInterface
     {
         return new ProductOfferReferenceToIdProductOfferStep($this->getProductOfferFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStockNameToIdStockStep(): DataImportStepInterface
     {
         return new StockNameToIdStockStep();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferStockDataImport\Dependency\Facade\ProductOfferStockDataImportToProductOfferFacadeInterface
-     */
     public function getProductOfferFacade(): ProductOfferStockDataImportToProductOfferFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferStockDataImportDependencyProvider::FACADE_PRODUCT_OFFER);

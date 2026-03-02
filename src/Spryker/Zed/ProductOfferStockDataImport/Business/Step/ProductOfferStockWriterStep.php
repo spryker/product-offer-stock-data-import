@@ -36,11 +36,6 @@ class ProductOfferStockWriterStep extends PublishAwareStep implements DataImport
         self::IS_NEVER_OUT_OF_STOCK,
     ];
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $this->validateDataSet($dataSet);
@@ -74,11 +69,6 @@ class ProductOfferStockWriterStep extends PublishAwareStep implements DataImport
         }
     }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return \Orm\Zed\ProductOfferStock\Persistence\SpyProductOfferStock
-     */
     protected function findOrCreateProductOfferStock(DataSetInterface $dataSet): SpyProductOfferStock
     {
         /** @var \Orm\Zed\ProductOfferStock\Persistence\SpyProductOfferStock|null $productOfferStockEntity */

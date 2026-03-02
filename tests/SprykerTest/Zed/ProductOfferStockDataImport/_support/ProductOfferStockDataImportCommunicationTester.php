@@ -29,9 +29,6 @@ class ProductOfferStockDataImportCommunicationTester extends Actor
 {
     use _generated\ProductOfferStockDataImportCommunicationTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureProductOfferStockTableIsEmpty(): void
     {
         $query = $this->getProductOfferQuery();
@@ -39,9 +36,6 @@ class ProductOfferStockDataImportCommunicationTester extends Actor
         $query->deleteAll();
     }
 
-    /**
-     * @return void
-     */
     public function assertProductOfferStockDatabaseTablesContainsData(): void
     {
         $configurableBundleTemplateQuery = $this->getProductOfferStockQuery();
@@ -52,17 +46,11 @@ class ProductOfferStockDataImportCommunicationTester extends Actor
         );
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferStock\Persistence\SpyProductOfferStockQuery
-     */
     protected function getProductOfferStockQuery(): SpyProductOfferStockQuery
     {
         return SpyProductOfferStockQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ProductOffer\Persistence\SpyProductOfferQuery
-     */
     protected function getProductOfferQuery(): SpyProductOfferQuery
     {
         return SpyProductOfferQuery::create();

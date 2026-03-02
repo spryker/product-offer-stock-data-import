@@ -24,9 +24,6 @@ class ProductOfferReferenceToIdProductOfferStep implements DataImportStepInterfa
      */
     protected $productOfferFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferStockDataImport\Dependency\Facade\ProductOfferStockDataImportToProductOfferFacadeInterface $productOfferFacade
-     */
     public function __construct(ProductOfferStockDataImportToProductOfferFacadeInterface $productOfferFacade)
     {
         $this->productOfferFacade = $productOfferFacade;

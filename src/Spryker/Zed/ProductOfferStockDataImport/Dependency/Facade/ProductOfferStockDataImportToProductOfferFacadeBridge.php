@@ -25,11 +25,6 @@ class ProductOfferStockDataImportToProductOfferFacadeBridge implements ProductOf
         $this->productOfferFacade = $productOfferFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferCriteriaTransfer $productOfferCriteria
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer|null
-     */
     public function findOne(ProductOfferCriteriaTransfer $productOfferCriteria): ?ProductOfferTransfer
     {
         return $this->productOfferFacade->findOne($productOfferCriteria);

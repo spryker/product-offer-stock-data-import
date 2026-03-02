@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\ProductOfferTransfer;
 
 interface ProductOfferStockDataImportToProductOfferFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferCriteriaTransfer $productOfferCriteria
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer|null
-     */
     public function findOne(ProductOfferCriteriaTransfer $productOfferCriteria): ?ProductOfferTransfer;
 }
